@@ -1,0 +1,86 @@
+html,
+body,
+main {
+    height: 100vh;
+    max-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main>div {
+    height: 100%;
+    max-height: 100%;
+    overflow: scroll;
+    flex-shrink: 1;
+}
+
+#guilds,
+#channels {
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+    font-size: 0.7em;
+    line-height: 1;
+}
+
+button.server,
+button.channel {
+    line-height: inherit;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.message .timestamp {
+    opacity: 0.5;
+    font-size: 0.7em;
+}
+
+.message .contents {
+    white-space: pre-wrap;
+}
+
+.message {
+    margin-block: 0.2em;
+    padding: 0.2em;
+    border: 1px solid #fff2;
+    border-radius: 0.4em;
+    position: relative;
+}
+
+.message img {
+    object-fit: contain;
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+body.matched .server:not(.matched),
+body.matched .channel:not(.matched),
+body.matched .message:not(.matched) {
+    display: none;
+}
+
+#toolbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5em;
+}

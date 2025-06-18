@@ -1,0 +1,32 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discord Data Viewer</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css" />
+    <link rel="stylesheet" href="https://dododoshirouto.github.io/dodo-simple.css/sample/dodo-simple.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</head>
+
+<body>
+    <div id="toolbox">
+        <p id="zip_file_import">
+            <input id="zip_file_input" placeholder="Discord Data Zip" type="file" accept=".zip" />
+        </p>
+        <p id="search"><input id="searchInput" type="text" placeholder="Search"><button id="searchButton"
+                onclick="searchInAllMessages(document.getElementById('searchInput').value)">Search</button></p>
+    </div>
+
+    <main>
+        <div id="guilds"></div>
+        <div id="channels"></div>
+        <div id="messages"></div>
+    </main>
+
+
+    <script src="functions.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
